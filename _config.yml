@@ -3,3 +3,4 @@ exclude:
   - npm-debug.log
   - package.json
   - README.md
+  - src
