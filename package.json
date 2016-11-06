@@ -1,0 +1,36 @@
+{
+  "name": "Sul-problema-di-Apollonio",
+  "private": true,
+  "homepage": "http://g14n.info/Sul-problema-di-Apollonio",
+  "author": {
+    "name": "Gianluca Casati",
+    "url": "http://g14n.info"
+  },
+  "version": "0.1.0",
+  "description": "La mia testi di laurea",
+  "main": "index.md",
+  "scripts": {
+    "start": "jekyll serve --incremental",
+    "build": "npm run tex",
+    "tex": "npm run tex:display; npm run tex:inline",
+    "tex:display": "ls src/tex/display/*.tex | while read texfile; do cat $texfile | katex --display-mode > _includes/math-display/$(basename ${texfile%.tex}).html; done",
+    "tex:inline": "ls src/tex/inline/*.tex | while read texfile; do cat $texfile | katex > _includes/math-inline/$(basename ${texfile%.tex}).html; done"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fibo/Sul-problema-di-Apollonio.git"
+  },
+  "keywords": [
+    "math"
+  ],
+  "license": [
+    {
+      "type": "MIT",
+      "url": "http://g14n.info/mit-license"
+    }
+  ],
+  "devDependencies": {},
+  "dependencies": {
+    "katex": "^0.5.0"
+  }
+}
