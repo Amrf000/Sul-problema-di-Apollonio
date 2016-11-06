@@ -10,9 +10,15 @@ layout: common/singlepage
 *Poi dall'ombra nacque un fiore,*
 *tre fu il fischio della voce.*
 
+
+Prova tex {% include math/inline/for-any-real.html %}.
+
+Prova tex {% include math/display/matrix.html %}.
+
 Apollonio da Perga (terzo secolo a.C.) fu, assieme ad Euclide e al nostro Archimede, uno dei più grandi matematici dell'antichità. In un'opera chiamata **Tangenze**, propone un problema molto interessante:
 
 > Dati tre cerchi tangenti a due a due, trovare un cerchio tangente a tutti e tre
+
 
 <!-- figura con i tre cerchi tangenti -->
 
