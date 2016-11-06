@@ -29,7 +29,9 @@
       "url": "http://g14n.info/mit-license"
     }
   ],
-  "devDependencies": {},
+  "devDependencies": {
+    "dot-editorconfig": "^0.3.0"
+  },
   "dependencies": {
     "katex": "^0.6.0",
     "svgx": "^0.6.1"
