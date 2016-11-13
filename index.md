@@ -56,16 +56,26 @@ In questo capitolo ci sono tre soluzioni del PdA. Ognuna è indipendente dalle a
 
 Sperando di sistemare, con poco sforzo per il lettore, un'esaudiente introduzione alla geometria inversiva, comincio con la seguente
 
-**definizione 1** *Siano dati un segmento AB ed una constante positiva K, definisco (TODO Gamma) come il luogo dei punti P tali che*
+#### definizione 1
 
+Siano dati un segmento $$AB$$ ed una constante positiva $$K$$, definisco $$\Gamma$$ Γ come il luogo dei punti $$P$$ tali che
+
+$$
 AP = K PB
+$$
 
-Il lettore può sempre scegliere la dimensione n dello spazio euclideo in cui cercare i punti del luogo gamma.
-Le proposizioni che seguono mi servono per la soluzione inversiva del PdA ma sono valide per ogni n>0. Per ora suggerisco di porre n=1 cioè di guardare solo la retta s passante per AB
+Il lettore può sempre scegliere la dimensione $$n$$ dello spazio euclideo in cui cercare i punti del luogo $$\Gamma$$.
+Le proposizioni che seguono mi servono per la soluzione inversiva del PdA ma sono valide per ogni $$n>0$$. Per ora suggerisco di porre
+
+$$
+n=1
+$$
+
+cioè di guardare solo la retta $$s$$ passante per $$AB$$
 
 <!-- disegno retta -->
 
-Se K=1 il luogo gamma è semplicemente il punto medio tra A e B. Se k diverso 1 è composto da due punti, siano C e D.
+Se $$K=1$$ il luogo $$\Gamma$$ è semplicemente il punto medio tra A e B. Se k diverso 1 è composto da due punti, siano C e D.
 
 **esercizio 1** *Si considerino i punti A=0 e B=3 sulla retta dei reali. Trovare i punti C e D del luogo gamma2 = { insieme dei punti P tali che AP = 2 BP }*
 
@@ -89,7 +99,7 @@ Inoltre
 
 <!-- formula -->
 
-da cui si ricava che <!-- formula --> che ha senso perchè si suppone K ≠ 1. Fissato il segmento AB, questa ultima relazione permette di muovere il luogo gamma ala variare di K.
+da cui si ricava che <!-- formula --> che ha senso perchè si suppone $$K \neq 1$$. Fissato il segmento $$AB$$, questa ultima relazione permette di muovere il luogo $$\Gamma$$ al variare di $$K$$.
 
 **esercizio 2** *Si prenda la retta reale con A = -1, B=1 e K appartenente (1,infinito). Esprimere i punti C e D in funzione di K.*
 
@@ -98,7 +108,7 @@ da cui si ricava che <!-- formula --> che ha senso perchè si suppone K ≠ 1. F
 OP OQ = r2*
 
 Si AB il segmento [-1, 1] e, come nell'esercizio precedente, si trasformi con l'inversione di centro zero e raggio uno. Si scelga la constante K e si trovino i punti C e D corrispondenti.
-Attenzione! Non si può ancora considerare il luogo gamma1 perchè coincide proprio con O che, per adesso, non si può invertire. In particolare, l'espressione analitica di questa trasformazione è
+Attenzione! Non si può ancora considerare il luogo $$\Gamma$$ perchè coincide proprio con O che, per adesso, non si può invertire. In particolare, l'espressione analitica di questa trasformazione è
 
 <!-- formula -->
 
@@ -118,13 +128,15 @@ Si sceglie questo nome per il punto aggiunto proprio perchè, al crescere di K, 
 
 <!-- figura proiezione stereografica 1-dimensionale -->
 
-Ma ci sono altri punti nel luogo gamma? Se si suppone che esista un altri punto P appartenente a gamma che non sia allienato con la retta s, si può guardare nel piano ∏ contenente quel punto P e la retta s
+Ma ci sono altri punti nel luogo $$\Gamma$$? Se si suppone che esista un altri punto P appartenente a $$\Gamma$$ che non sia allienato con la retta s, si può guardare nel piano ∏ contenente quel punto P e la retta s
 
 <!-- figura -->
 
 d'ora in avanti si pone
 
-** n = 2 **
+$$
+n = 2
+$$
 
 per sviluppare gli strumenti di geometria inversiva che servono a risolvere il PdA. Tanto per cominciare il luogo gamma1 è una retta, precisamente, l'asse del segmento AB.
 
@@ -149,7 +161,7 @@ questo significa che il birapporto si conserva i.e. è un invariante della geome
 
 {A'B', C'D'} = ecc.
 
-**Proposizione 2 (conservazione dei luoghi)** Se si trasforma un luogo gamma K con un'inversione, si ottiene un altro luogo gammaK'.
+**Proposizione 2 (conservazione dei luoghi)** Se si trasforma un luogo $$\Gamma_K$$ con un'inversione, si ottiene un altro luogo $$\Gamma_K'$$.
 
 ...........
 continua da pagina 9
