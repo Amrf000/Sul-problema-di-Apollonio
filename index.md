@@ -6,7 +6,18 @@ nav:
   Iterazione: '#iterazione'
 ---
 
-{% include lib/mathjax.html %}
+
+> Sulle rive di uno stagno, passò un satiro e La vide,
+> Reginella sempre bella, è la musica di Euclide.
+> È all'identità, il riflesso, ciò a cui diede movimento,
+> ben tre sassi egli lanciò, distribuendoli nel vento.
+> Poi dall'ombra nacque un fiore,
+> tre fu il fischio della voce.
+
+
+Apollonio da Perga (terzo secolo a.C.) fu, assieme ad Euclide e al nostro Archimede, uno dei più grandi matematici dell'antichità. In un'opera chiamata **Tangenze**, propone un problema molto interessante:
+
+> Dati tre cerchi tangenti a due a due, trovare un cerchio tangente a tutti e tre
 
 $$ \forall x \in R $$
 
@@ -17,19 +28,6 @@ x_{21} & x_{22} & \ldots \\
 \vdots & \vdots & \ldots \\
 \end{array} \right)
 $$
-
-*Sulle rive di uno stagno, passò un satiro e La vide,*
-*Reginella sempre bella, è la musica di Euclide.*
-*È all'identità, il riflesso, ciò a cui diede movimento,*
-*ben tre sassi egli lanciò, distribuendoli nel vento.*
-*Poi dall'ombra nacque un fiore,*
-*tre fu il fischio della voce.*
-
-
-Apollonio da Perga (terzo secolo a.C.) fu, assieme ad Euclide e al nostro Archimede, uno dei più grandi matematici dell'antichità. In un'opera chiamata **Tangenze**, propone un problema molto interessante:
-
-> Dati tre cerchi tangenti a due a due, trovare un cerchio tangente a tutti e tre
-
 
 <!-- figura con i tre cerchi tangenti -->
 
@@ -205,4 +203,6 @@ i due cerchi soluzione sono anch'essi tangenti alle due rette parallele e, appli
 ### Un altro Anatema
 
 ## Frazioni continue complesse e orosfere nello Spazio Iperbolico
+
+{% include lib/mathjax.html %}
 
