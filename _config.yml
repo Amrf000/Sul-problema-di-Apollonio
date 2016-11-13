@@ -1,5 +1,7 @@
 lang: it
 
+description: la mia tesi di laurea
+
 exclude:
   - node_modules
   - npm-debug.log
