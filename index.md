@@ -13,14 +13,50 @@ nav:
 > Poi dall'ombra nacque un fiore,
 > tre fu il fischio della voce.
 
+<style>
+  circle {
+    fill: transparent;
+    stroke: black;
+  }
+</style>
 
 Apollonio da Perga (terzo secolo a.C.) fu, assieme ad Euclide e al nostro Archimede, uno dei più grandi matematici dell'antichità. In un'opera chiamata **Tangenze**, propone un problema molto interessante:
 
-> Dati tre cerchi tangenti a due a due, trovare un cerchio tangente a tutti e tre
+> Dati tre cerchi tangenti a due a due,
 
-<!-- figura con i tre cerchi tangenti -->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 200 200"
+  height="200"
+  width="200"
+>
+  <circle cx="100" cy="60" r="50"/>
+  <circle cx="170" cy="70" r="20"/>
+  <circle cx="155" cy="115" r="27"/>
+</svg>
 
-Purtroppo gli scritti originali sono persi nella storia e la soluzione data da Apollonio non è pervenuta fino a noi, ma, conosciamo il problema solo grazie ad una citazione di [Pappo](https://it.wikipedia.org/wiki/Pappo_di_Alessandria). Studierò questo problema e la sua iterazione muovendomi lungo il sentiero che l'ispirazione mi ha tracciato.
+> trovare un cerchio tangente a tutti e tre
+
+Purtroppo gli scritti originali sono persi nella storia e la soluzione data da Apollonio non è pervenuta fino a noi, ma, per fortuna conosciamo il problema grazie ad una citazione di [Pappo](https://it.wikipedia.org/wiki/Pappo_di_Alessandria). Studierò questo problema e la sua iterazione muovendomi lungo il sentiero che l'ispirazione mi ha tracciato.
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 400 400"
+  height="400"
+  width="400"
+>
+  <circle cx="140" cy="160" r="100"/>
+  <circle cx="140" cy="160" r="105" stroke-dasharray="5, 5"/> <!-- r + 5 -->
+  <circle cx="140" cy="160" r="120" stroke-dasharray="5, 5"/> <!-- r + 20 -->
+
+  <circle cx="279" cy="142" r="40"/>
+  <circle cx="279" cy="142" r="45" stroke-dasharray="5, 5"/> <!-- r + 5 -->
+  <circle cx="279" cy="142" r="60" stroke-dasharray="5, 5"/> <!-- r + 20 -->
+
+  <circle cx="273" cy="232" r="50"/>
+  <circle cx="273" cy="232" r="55" stroke-dasharray="5, 5"/> <!-- r + 5 -->
+  <circle cx="273" cy="232" r="70" stroke-dasharray="5, 5"/> <!-- r + 20 -->
+</svg>
 
 ## Soluzione Euristica
 
@@ -102,32 +138,40 @@ da cui si ricava che <!-- formula --> che ha senso perchè si suppone $$K \neq 1
 
 **esercizio 2** *Si prenda la retta reale con A = -1, B=1 e K appartenente (1,infinito). Esprimere i punti C e D in funzione di K.*
 
-**definizione 2 (inversione di centro O e raggio r)** *L'immagine di un punto P, diverso da O, è il punto Q che sta sulla semiretta OP uscente dal centro O e tale che
+#### definizione 2 (inversione di centro O e raggio r)
 
+L'immagine di un punto $$P$$, diverso da $$O$$, è il punto $$Q$$ che sta sulla semiretta $$OP$$ uscente dal centro $$O$$ e tale che
+
+$$
 OP OQ = r2*
+$$
 
-Si AB il segmento [-1, 1] e, come nell'esercizio precedente, si trasformi con l'inversione di centro zero e raggio uno. Si scelga la constante K e si trovino i punti C e D corrispondenti.
-Attenzione! Non si può ancora considerare il luogo $$\Gamma$$ perchè coincide proprio con O che, per adesso, non si può invertire. In particolare, l'espressione analitica di questa trasformazione è
+Si $$AB$$ il segmento $$[-1, 1]$$ e, come nell'esercizio precedente, si trasformi con l'inversione di centro zero e raggio uno. Si scelga la constante $$K$$ e si trovino i punti $$C$$ e $$D$$ corrispondenti.
+Attenzione! Non si può ancora considerare il luogo $$\Gamma$$ perchè coincide proprio con $$O$$ che, per adesso, non si può invertire. In particolare, l'espressione analitica di questa trasformazione è
 
-<!-- formula -->
+$$
+x \mapsto \frac{1}{x}
+$$
 
 Ecco alcune proprietà:
 
-* i punti A e B sono fissi,
-* l'immagine di C è D, e viceversa, infatti OC OD = 1,
-* l'interno del segmento AB si scambia con l'esterno,
+* i punti $$A$$ e $$B$$ sono fissi,
+* l'immagine di $$C$$ è $$D$$, e viceversa, infatti $$OC \cdot OD = 1$$,
+* l'interno del segmento $$AB$$ si scambia con l'esterno,
 * è una trasformazione involutiva, cioè è inversa di sè stessa.
 
-Ma dove va a finire il punti O? Per saperlo bisogna definire l'ambiente dove si svolge la geometria inversiva, cioè dove ogni inversione è una bigezione.
-Occorre aggiungere un punto *ideale* che sia l'immagine di O, mantendendo le proprietà viste prima.
+Ma dove va a finire il punto $$O$$? Per saperlo bisogna definire l'ambiente dove si svolge la geometria inversiva, cioè dove ogni inversione è una bigezione.
+Occorre aggiungere un punto *ideale* che sia l'immagine di $$O$$, mantendendo le proprietà viste prima.
 
-**definizione 3 (retta inversiva S1)** *É la retta s con un punto in più a cui si attribuisce i simbolo ∞.*
+#### definizione 3 (retta inversiva S1)
 
-Si sceglie questo nome per il punto aggiunto proprio perchè, al crescere di K, il punto C si avvicina ad O e di conseguenza OD aumenta. Niente paura, la retta inversiva si può immaginare come un cerchio e per passare da s a S1 si può usare la
+É la retta $$s$$ con un punto in più a cui si attribuisce i simbolo $$\infty$$.
+
+Si sceglie questo nome per il punto aggiunto proprio perchè, al crescere di $$K$$, il punto $$C$$ si avvicina ad $$O$$ e di conseguenza $$OD$$ aumenta. Niente paura, la retta inversiva si può immaginare come un cerchio e per passare da $$s$$ a $$S^1$$ si può usare la
 
 <!-- figura proiezione stereografica 1-dimensionale -->
 
-Ma ci sono altri punti nel luogo $$\Gamma$$? Se si suppone che esista un altri punto P appartenente a $$\Gamma$$ che non sia allienato con la retta s, si può guardare nel piano ∏ contenente quel punto P e la retta s
+Ma ci sono altri punti nel luogo $$\Gamma$$? Se si suppone che esista un altri punto $$P$$ appartenente a $$\Gamma$$ che non sia allienato con la retta $$s$$, si può guardare nel piano $$\Pi$$ contenente quel punto $$P$$ e la retta $$s$$
 
 <!-- figura -->
 
@@ -137,28 +181,49 @@ $$
 n = 2
 $$
 
-per sviluppare gli strumenti di geometria inversiva che servono a risolvere il PdA. Tanto per cominciare il luogo gamma1 è una retta, precisamente, l'asse del segmento AB.
+per sviluppare gli strumenti di geometria inversiva che servono a risolvere il PdA. Tanto per cominciare il luogo gamma1 è una retta, precisamente, l'asse del segmento $$AB$$.
 
-Il piano inversivo S2 si può immaginare come la superficie di una sfera dove il punto all'infinito è il polo nord. Disegnare nel piano inversivo è come diseganre su un pallone dove le rette sono le circonferenze passanti per il polo nord. Non può mancare nella geometria inversiva questa
+Il piano inversivo $$S^2$$ si può immaginare come la superficie di una sfera dove il punto all'infinito è il polo nord. Disegnare nel piano inversivo è come diseganre su un pallone dove le rette sono le circonferenze passanti per il polo nord. Non può mancare nella geometria inversiva questa
 
-**definizione 4 (birapporto inversivo)** Da non confondere con il birapporto proiettivo, presi quattro punti distinti A, B, C, D è definito come segue
+#### definizione 4 (birapporto inversivo)
 
-<!-- formula -->
+Da non confondere con il birapporto proiettivo, presi quattro punti distinti $$A, B, C, D$$ è definito come segue
 
-Proposizione 1 Il birapporto è invariante per le trasformazioni della geometria inversiva.
+$$
+{AB, CD} = \frac{AC \cdot BD}{AD \cdot BC}
+$$
 
-Sia l'inversione di centro O, raggio r e siano i punti come in figura
+#### Proposizione 1
+
+Il birapporto è invariante per le trasformazioni della geometria inversiva.
+
+Sia l'inversione di centro $$O$$, raggio $$r$$ e siano i punti come in figura
 
 <!-- figura -->
 
-dove OA OA' = r2 = OB OB'. Allora OB : OA' = OA : OB' e OAB ~ OA'B. I triangoli sono simili, avendo due lati in proporzione ed un angolo comune in O. <!--formula inline --> quindi <!-- formula inline -->.
-Se prendo quattro punti distinti A, B, C, D e ne calcolo il birapporto {AB, CD}, poi trasformo con un'inversione e ottengo altri punti A', B', C', D' e ne calcolo il birapporto risulta
+dove $$OA \cdot OA' = r^2 = OB \cdot OB'$$. Allora $$OB : OA' = OA : OB'$$ e $$OAB \sim OA'B$$. I triangoli sono simili, avendo due lati in proporzione ed un angolo comune in O. <!--formula inline --> quindi <!-- formula inline -->.
+Se prendo quattro punti distinti $$A, B, C, D$$ e ne calcolo il birapporto $$\{AB, CD\}$$, poi trasformo con un'inversione e ottengo altri punti $$A', B', C', D'$$ e ne calcolo il birapporto risulta
 
-{AB, CD} = {A'B', C'D'}
+$$
+\{AB, CD\} = \{A'B', C'D'\}
+$$
 
 questo significa che il birapporto si conserva i.e. è un invariante della geometria inversiva. Facendo il conto
 
-{A'B', C'D'} = ecc.
+$$
+\{A'B', C'D'\}
+= \frac{A'C' \cdot B'D'}{A'D' \cdot B'C'}
+= \frac{
+    \frac{r^2 \cdot AC}{OA \cdot OC}
+      \cdot
+    \frac{r^2 \cdot BD}{OB \cdot OD}
+  }{
+    \frac{r^2 \cdot AD}{OA \cdot OD}
+      \cdot
+    \frac{r^2 \cdot BC}{OB \cdot OC}
+  }
+= \{AB, CD\}
+$$
 
 **Proposizione 2 (conservazione dei luoghi)** Se si trasforma un luogo $$\Gamma_K$$ con un'inversione, si ottiene un altro luogo $$\Gamma_K'$$.
 
