@@ -18,16 +18,6 @@ Apollonio da Perga (terzo secolo a.C.) fu, assieme ad Euclide e al nostro Archim
 
 > Dati tre cerchi tangenti a due a due, trovare un cerchio tangente a tutti e tre
 
-$$ \forall x \in R $$
-
-$$
-M = \left( \begin{array}{ccc}
-x_{11} & x_{12} & \ldots \\
-x_{21} & x_{22} & \ldots \\
-\vdots & \vdots & \ldots \\
-\end{array} \right)
-$$
-
 <!-- figura con i tre cerchi tangenti -->
 
 Purtroppo gli scritti originali sono persi nella storia e la soluzione data da Apollonio non è pervenuta fino a noi, ma, conosciamo il problema solo grazie ad una citazione di [Pappo](https://it.wikipedia.org/wiki/Pappo_di_Alessandria). Studierò questo problema e la sua iterazione muovendomi lungo il sentiero che l'ispirazione mi ha tracciato.
@@ -36,7 +26,7 @@ Purtroppo gli scritti originali sono persi nella storia e la soluzione data da A
 
 Siano tre cerchi tangenti a due a due, se si espandono come le onde di tre sassi lanciati in uno stagno, c'è un instante nel quale i tre cerchi passano per lo stesso punto.
 Questo punto si trova all'interno della zona detta *triangolo curvilineo*, delimitata dai tre cerchi iniziali ed è il centro del cerchio da trovare!
-Infatti se ho due cerchi tangenti di raggi *R* ed *r* e voglio trovare un cerchio di raggio *ρ* tangente ai due, li espando fino a che i raggi siano *R + ρ* e *r + ρ*. Uno dei punti in comune dei nuovi cerchi può essere il centro del cerchio di raggio *ρ*.
+Infatti se ho due cerchi tangenti di raggi $$R$$ ed $$r$$ e voglio trovare un cerchio di raggio $$\rho$$ tangente ai due, li espando fino a che i raggi siano $$R+\rho$$ e $$r+\rho$$. Uno dei punti in comune dei nuovi cerchi può essere il centro del cerchio di raggio $$\rho$$.
 
 <!-- Animazione con i tre cerchi tangenti che si espandono
      ... come tre sassi lanciati in uno stagno -->
@@ -48,6 +38,15 @@ Inoltre esistono due soluzione del PdA: oltre al cerchio che si trova all'intern
 
 <!-- figura con le due soluzioni del PdA -->
 
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 200 200"
+  height="300"
+  width="300"
+>
+  <circle cx="100" cy="100" r="100"/>
+</svg>
+
 ## Soluzioni del Problema di Apollonio
 
 In questo capitolo ci sono tre soluzioni del PdA. Ognuna è indipendente dalle altre ma nei capitoli successivi si uniranno nello studio dell'iterazione del PdA. Esiste anche una soluzione con riga e compasso, credo sia di Hartshorne.
@@ -58,10 +57,10 @@ Sperando di sistemare, con poco sforzo per il lettore, un'esaudiente introduzion
 
 #### definizione 1
 
-Siano dati un segmento $$AB$$ ed una constante positiva $$K$$, definisco $$\Gamma$$ Γ come il luogo dei punti $$P$$ tali che
+Siano dati un segmento $$AB$$ ed una constante positiva $$K$$, definisco $$\Gamma$$ come il luogo dei punti $$P$$ tali che
 
 $$
-AP = K PB
+AP = K \cdot PB
 $$
 
 Il lettore può sempre scegliere la dimensione $$n$$ dello spazio euclideo in cui cercare i punti del luogo $$\Gamma$$.
