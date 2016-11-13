@@ -1,10 +1,9 @@
 lang: it
 
 description: la mia tesi di laurea
+keywords:
+  - geometria
+  - frattale
 
 exclude:
-  - node_modules
-  - npm-debug.log
-  - package.json
   - README.md
-  - src
