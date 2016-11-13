@@ -1,6 +1,9 @@
 ---
 title: Sul problema di Apollonio
-layout: common/singlepage
+layout: common/page
+nav:
+  'Soluzione Euristica': '#soluzione-euristica'
+  Iterazione: '#iterazione'
 ---
 
 *Sulle rive di uno stagno, passò un satiro e La vide,*
