@@ -3,3 +3,6 @@ npm-debug.log
 .jekyll-metadata
 _site
 *.swp
+
+# get it from http://g14n.info/style.css
+style.css

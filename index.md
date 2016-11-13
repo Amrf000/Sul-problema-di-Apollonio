@@ -6,6 +6,18 @@ nav:
   Iterazione: '#iterazione'
 ---
 
+{% include lib/mathjax.html %}
+
+$$ \forall x \in R $$
+
+$$
+M = \left( \begin{array}{ccc}
+x_{11} & x_{12} & \ldots \\
+x_{21} & x_{22} & \ldots \\
+\vdots & \vdots & \ldots \\
+\end{array} \right)
+$$
+
 *Sulle rive di uno stagno, passò un satiro e La vide,*
 *Reginella sempre bella, è la musica di Euclide.*
 *È all'identità, il riflesso, ciò a cui diede movimento,*
@@ -13,10 +25,6 @@ nav:
 *Poi dall'ombra nacque un fiore,*
 *tre fu il fischio della voce.*
 
-
-Prova tex {% include math/inline/for-any-real.html %}.
-
-Prova tex {% include math/display/matrix.html %}.
 
 Apollonio da Perga (terzo secolo a.C.) fu, assieme ad Euclide e al nostro Archimede, uno dei più grandi matematici dell'antichità. In un'opera chiamata **Tangenze**, propone un problema molto interessante:
 
