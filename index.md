@@ -6,7 +6,6 @@ nav:
   Iterazione: '#iterazione'
 ---
 
-
 > Sulle rive di uno stagno, passò un satiro e La vide,
 > Reginella sempre bella, è la musica di Euclide.
 > È all'identità, il riflesso, ciò a cui diede movimento,
