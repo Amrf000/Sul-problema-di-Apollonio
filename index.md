@@ -2,9 +2,12 @@
 title: Sul problema di Apollonio
 layout: common/page
 nav:
+  'Sul problema di Apollonio': './'
   'Soluzione Euristica': '#soluzione-euristica'
   Iterazione: '#iterazione'
 ---
+
+# Sul problema di Apollonio
 
 > Sulle rive di uno stagno, passò un satiro e La vide,
 > Reginella sempre bella, è la musica di Euclide.
