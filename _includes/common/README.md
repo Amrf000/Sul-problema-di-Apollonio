@@ -4,12 +4,12 @@
 
 ## Setup
 
-Assuming that the content of the *gh-pages* branch is under the *gh-pages/* folder, do
+Assuming that you are using the *docs/* folder for GitHub Pages, do
 
 1. [Add remote](#add-remote)
 2. [Add subtree](#add-subtree)
 
-Then use the includes as usual, for example in *gh-pages/_layouts/page.html*
+Then use the includes as usual, for example in *docs/_layouts/page.html*
 
 ```
 {% include common/analytics.html %}
@@ -24,7 +24,7 @@ git remote add common_includes git@github.com:fibo/g14n.info-jekyll-includes.git
 ### Add subtree
 
 ```bash
-git subtree add --prefix=gh-pages/_includes/common/ common_includes master
+git subtree add --prefix=docs/_includes/common/ common_includes master
 ```
 
 ## Update
@@ -33,13 +33,19 @@ If you are in a new cloned repo, you need to [add remote](#add-remote) first.
 
 In a working tree with all modifications committed, launch
 
-```
-git subtree --prefix=gh-pages/_includes/common/ pull common_includes master
+```bash
+git subtree --prefix=docs/_includes/common/ pull common_includes master
 ```
 
 ## Content
 
 ### analytics.html
+
+Contains Google Analytics tag.
+
+### footer.html
+
+Copyright, license.
 
 ### meta.html
 
@@ -49,17 +55,27 @@ Requires `page.title` and *_data/package.json* file with the following entries:
 * keywords
 * author.name
 
-### purecss.html
+### nav.html
 
-Includes a minified version of purecss from Yahoo CDN.
+Implments nav bar: project `repository_url` and `url` are grabbed from [github-metadata].
+It looks into `page.nav` or `site.nav` variable, if any, for example
 
-### github-corner.html
+```yaml
+nav:
+  Pizza: /pizza
+  Mafia: '#mafia'
+  Mandolino: //g14n.info
+```
 
-Comes from [GitHub corners](http://tholman.com/github-corners/).
+Home page is added by default, link to repo is added only if *_data/package.json* `private` attribute is not true.
 
-### github-markdown-css.html
+### js-bundle.html
 
-[github-markdown-css](https://github.com/sindresorhus/github-markdown-css) is
+Includes `g14n.info/js/bundle.js` that implements common features across
+website, like nav toggle.
 
-> The minimal amount of CSS to replicate the GitHub Markdown style
+### style.html
 
+Adds common style sheet.
+
+[github-metadata]: https://github.com/jekyll/github-metadata "a.k.a. site.github"
